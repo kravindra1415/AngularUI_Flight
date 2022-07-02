@@ -1,0 +1,25 @@
+<div class="container">
+    <h1 class="mb-3">Cities</h1>
+
+    <table class="table" *ngIf="cities && cities.length>0">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Country</th>
+                <th> </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let city of cities">
+                <td>{{city.id}}</td>
+                <td>{{city.name}}</td>
+                <td>{{city.countryRef.name}}</td>
+                <td><a [routerLink]="['/cities','edit',city.id]">View</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p *ngIf="!cities || cities.length<=0">No cities Found!!</p>
+</div>

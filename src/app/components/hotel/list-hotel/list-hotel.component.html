@@ -1,0 +1,28 @@
+<div class="container">
+    <h1 class="mb-3">Hotels</h1>
+
+    <table class="table" *ngIf="hotels && hotels.length>0">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Star</th>
+                <th>City</th>
+                <th> </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let hotel of hotels">
+                <td>{{hotel.id}}</td>
+                <td>{{hotel.name}}</td>
+                <td>{{hotel.star}}</td>
+                <td>{{hotel.cityRef.name}}</td>
+
+                <td><a [routerLink]="['/hotels','edit',hotel.id]">View</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p *ngIf="!hotels || hotels.length<=0">No Hotels Found!!</p>
+</div>

@@ -1,0 +1,30 @@
+<div class="container my-5">
+    <h1 class="mb-5 text-success text-center">Edit Hotel</h1>
+    <hr />
+    <div class="row">
+        <div class="offset-2 col-md-6">
+            <form #form="ngForm" (ngSubmit)="editHotel()">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" [(ngModel)]="hotelUpdate.name">
+                </div>
+
+                <div class="mb-3">
+                    <label for="star" class="form-label">Star</label>
+                    <input type="star" class="form-control" id="star" name="star" [(ngModel)]="hotelUpdate.star">
+                </div>
+
+                <div class="mb-3">
+                    <label for="cityRefId" class="form-label">CityRefId</label>
+                    <input type="number" class="form-control" id="cityRefId" name="cityRefId"
+                        [(ngModel)]="hotelUpdate.cityRefId">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Update</button>
+                <button type="button" class="btn btn-danger" (click)="deleteHotel(hotelUpdate.id)">Delete</button>
+            </form>
+        </div>
+    </div>
+
+
+</div>
