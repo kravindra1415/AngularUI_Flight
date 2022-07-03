@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { EditAmenitiesComponent } from './components/Amenities/edit-amenities/edit-amenities.component';
 import { ListAmenitiesComponent } from './components/Amenities/list-amenities/list-amenities.component';
+import { EditAmenitiesLinkComponent } from './components/AmenitiesLink/edit-amenities-link/edit-amenities-link.component';
+import { ListAmenitiesLinkComponent } from './components/AmenitiesLink/list-amenities-link/list-amenities-link.component';
 import { AddCityComponent } from './components/City/add-city/add-city.component';
 import { EditCityComponent } from './components/City/edit-city/edit-city.component';
 import { ListCityComponent } from './components/City/list-city/list-city.component';
@@ -27,7 +29,11 @@ const routes: Routes = [
 
   { path: 'amenities', component: ListAmenitiesComponent },
   { path: 'amenities/amenities/add/:id', component: EditAmenitiesComponent },
-  { path: 'amenities/amenities/edit/:id', component: EditAmenitiesComponent }
+  { path: 'amenities/amenities/edit/:id', component: EditAmenitiesComponent },
+
+  { path: 'amenitiesLink', component: ListAmenitiesLinkComponent },
+  { path: 'amenitiesLink/amenitiesLink/add/:id', component: EditAmenitiesLinkComponent },
+  { path: 'amenitiesLink/amenitiesLink/edit/:id', component: EditAmenitiesLinkComponent }
 ];
 
 @NgModule({

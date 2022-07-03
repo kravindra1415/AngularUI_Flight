@@ -16,6 +16,8 @@ import { AddHotelComponent } from './components/hotel/add-hotel/add-hotel.compon
 import { EditHotelComponent } from './components/hotel/edit-hotel/edit-hotel.component';
 import { ListAmenitiesComponent } from './components/Amenities/list-amenities/list-amenities.component';
 import { EditAmenitiesComponent } from './components/Amenities/edit-amenities/edit-amenities.component';
+import { ListAmenitiesLinkComponent } from './components/AmenitiesLink/list-amenities-link/list-amenities-link.component';
+import { EditAmenitiesLinkComponent } from './components/AmenitiesLink/edit-amenities-link/edit-amenities-link.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { EditAmenitiesComponent } from './components/Amenities/edit-amenities/ed
     AddHotelComponent,
     EditHotelComponent,
     ListAmenitiesComponent,
-    EditAmenitiesComponent
+    EditAmenitiesComponent,
+    ListAmenitiesLinkComponent,
+    EditAmenitiesLinkComponent
   ],
   imports: [
     BrowserModule,

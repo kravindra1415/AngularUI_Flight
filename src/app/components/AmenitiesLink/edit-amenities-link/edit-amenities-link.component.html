@@ -1,0 +1,29 @@
+<div class="container my-5">
+    <h2>{{header}}</h2>
+
+    <hr />
+    <div class="row">
+        <div class="offset-2 col-md-6">
+            <form (ngSubmit)="addAmenitiesLink(f.form)" #f='ngForm'>
+
+                <div class="mb-3">
+                    <label for="id" class="form-label">Id</label>
+                    <input type="text" class="form-control" id="id" name="id" [(ngModel)]="amenityLink.id">
+                </div>
+
+                <div class="mb-3">
+                    <label for="hotelRefId" class="form-label">hotelRefId</label>
+                    <input type="text" class="form-control" id="hotelRefId" name="hotelRefId" [(ngModel)]="amenityLink.hotelRefId">
+                </div>
+
+                <div class="mb-3">
+                    <label for="amenitiesRefId" class="form-label">amenitiesRefId</label>
+                    <input type="amenitiesRefId" class="form-control" id="amenitiesRefId" name="amenitiesRefId"
+                        [(ngModel)]="amenityLink.amenitiesRefId">
+                </div>
+
+                <button type="submit" class="btn btn-success">Save</button>
+            </form>
+        </div>
+    </div>
+</div>

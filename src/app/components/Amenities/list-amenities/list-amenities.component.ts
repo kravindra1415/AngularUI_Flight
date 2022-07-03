@@ -29,6 +29,7 @@ export class ListAmenitiesComponent implements OnInit {
     this.amenitiesService.deleteAmenities(id)
       .subscribe((response) => {
         this.router.navigate(['amenities'])
+        this.router.navigate(['amenities'])
       })
   }
 

@@ -1,0 +1,28 @@
+<div class="container mt-5">
+    <h2>Hotel Amenities Link</h2>
+
+    <a routerLink="amenitiesLink/add/0" class="btn btn-primary mt-5 mb-3">Add Hotel Amenity</a>
+
+    <table class="table">
+        <thead>
+            <th>Id</th>
+            <th>Hotel</th>
+            <th>Amenities</th>
+            <th></th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let amenityLInk of amenitiesLink">
+                <td>{{amenityLInk.id}}</td>
+                <td>{{amenityLInk.hotelRef.name}}</td>
+                <td>{{amenityLInk.amenitiesRef.name}}</td>
+                <td><a [routerLink]="['amenitiesLink/edit',amenityLInk.id]"><i class="fa fa-edit fa-2x text-dark"
+                            aria-hidden="true"></i></a>
+                </td>
+                <td><a class="border-0"><i (click)="deleteAmenitiesLink(amenityLInk.id)"
+                            class="fa fa-trash fa-2x text-dark" aria-hidden="true"></i></a></td>
+
+                <!-- <td><button class="btn btn-danger" (click)="deleteAmenities(amenityLInk.id)">Delete</button></td> -->
+            </tr>
+        </tbody>
+    </table>
+</div>
